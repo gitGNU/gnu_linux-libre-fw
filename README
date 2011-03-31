@@ -1,0 +1,38 @@
+Linux-libre-firmware
+
+The goal of this project is to produce free firmware (with human-readable source code) for devices for which the Linux kernel currently requires loading of proprietary and/or binary-only firmware. It intends to be a free replacement for the linux-firmware repository.
+
+Recently the Linux-libre project, a fork of Linux, has raised the awareness on proprietary firmware being distributed with Linux. The Linux maintainers have been working on moving these blobs from the mainline Linux tree into a different tree, although Linux still distributes and requests these proprietary firmware, inducing the user to add non-free software to their systems.
+
+Linux-libre, a project run by the FSFLA, is a 100% free distribution of Linux, removing software that is obfuscated, distributed without source code, under non-free licenses or that induces the user to install additional non-free software. Although, there is an impact on functionality since many divers simply won't work. The goal of Linux-libre is to make people aware of this problem. After using Linux-libre for some time (and reading many /*(DEBLOBBED)*/ messages on syslog), we decided to work on filling the gaps.
+
+There are many ways of doing that. Some developers have written free firmware for Broadcom devices from scratch. In other cases, binary firmware might be distributed under the GPL (even if corresponding sources are not available). That means we can legally disassemble it, hopefully producing useful source code under free licensing terms.
+
+Most, if not all of the source code of this project will be written in device-specific assembly and/or low-level C.
+
+We are aware that some binary firmware that are distributed as part of Linux or requested by it are released under non-free terms, despite allowing distribution. This project won't deal with this kind of firmware.
+
+Each subdirectory in this folder must be considered a separate package. There is specific copyright information for each package in its respective folder. 
+
+List of drivers we are currently working on:
+
+* nndabusb - digital radio receptor that uses EzUSB, a 8051 cpu used by many other devices. The dabusb will be deprecated, but we hope the EzUSB hacking will still be useful.
+
+* rt2x00 - set of drivers for Ralink 802.11 devices. All devices (at least usb) seem to use basically the same firmware, which has been distributed under GPLv2+ with recent drivers.
+
+Authors/Maintainers
+Felipe Correa da Silva Sanches - juca@members.fsf.org
+Rodrigo Rodrigues da Silva - pitanga@members.fsf.org
+
+/*****************************************************************************/
+/*  Linux-libre-firmware - Free firmware for Linux drivers                   */
+/*                                                                           */
+/*  Copyright (C) 2011 Rodrigo Rodrigues da Silva                            */
+/*  Copyright (C) 2011 Felipe Corrêa da Silva Sanches                        */
+/*                                                                           */
+/*  This package is free software, licensed under the terms of the GNU       */
+/*  General Public License as published by the Free Software Foundation,     */
+/*  either version 2 of the License, or (at your option) any later version.  */
+/*  You should have received a copy of the GNU General Public License        */
+/*  along with this program.  If not, see <http://www.gnu.org/licenses/>.    */
+/*****************************************************************************/

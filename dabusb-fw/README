@@ -1,0 +1,33 @@
+dabusb-fw
+
+This project aims to be a free implementation (with source code) of 
+the firmware used by Terratec DrBox 1 digital radio receivers.  Even though the 
+device has been discontinued, its firmware can be used as a reference for 
+implementing firmware for EzUSB based devices. 
+
+dabusb-fw is licensed under the terms of the GNU General Public License
+as published by the Free Software Foundation, either version 2 of the License,
+or (at your option) any later version.
+
+Appart from the GPL, redistribution of this package must comply with the 
+following terms:
+
+ * Copyright (C) 1999 BayCom GmbH
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that redistributions of source
+ * code retain the above copyright notice and this comment without
+ * modification. 
+
+
+/*****************************************************************************/
+/*  dabusb-fw - README                                                       */
+/*                                                                           */
+/*  Copyright (C) 2011 Rodrigo Rodrigues da Silva                            */
+/*                                                                           */
+/*  This program is free software, licensed under the terms of the GNU       */
+/*  General Public License as published by the Free Software Foundation,     */
+/*  either version 2 of the License, or (at your option) any later version.  */
+/*  You should have received a copy of the GNU General Public License        */
+/*  along with this program.  If not, see <http://www.gnu.org/licenses/>.    */
+/*****************************************************************************/
