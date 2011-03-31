@@ -1,0 +1,23 @@
+rt2x00-fw
+
+This project aims to be a free implementation (with source code) of 
+the firmware used by Ralink wireless chips. This firmware is required
+by most cards that use the rt2x00usb drivers.
+
+Until August 2010, all GPL drivers released by Ralink contained one file with
+a large binary array, certainly the firmware. This specific file was released 
+under non-free terms, which explicitly avoided reverse engineering.
+
+Since then, when RT8070/RT3070/RT3370 drivers series was released, it
+seems that Ralink changed their mind and firmware.h now comes with a GPL
+header. The binary arrays are identical, except for 6 bytes, to the 
+previous RT2500USB(RT2571/RT2572) driver. Therefore, we assume that at
+least all USB chips use basically the same firmware.
+
+This project consists in disassembling, documenting and enhancing 
+such firmware, rendering it into a de-facto piece of free software
+and enabling users of this hardware to use it while keeping their
+freedom.
+
+The mentioned Ralink GPL drivers were fetched on 2-5-11 from:
+http://www.ralinktech.com/support.php?s=2

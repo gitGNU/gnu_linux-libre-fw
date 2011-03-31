@@ -1,0 +1,3 @@
+cat dabusb_fw.pre-sed | sed 's/\([0-9a-fA-F]*\)h/0x\1/' > dabusb_fw.d52
+
+asx8051 -los dabusb_fw.d52 2> errors

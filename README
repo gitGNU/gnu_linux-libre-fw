@@ -1,0 +1,19 @@
+The goal of this project is to produce free firmware (with human-readable source code) for devices for which the Linux kernel currently requires loading of proprietary firmware (blobs). It intends to be a free replacement for the linux-firmware repository.
+
+Recently the Linux-libre project, a fork of Linux, has raised the issue of proprietary firmware in Linux. The Linux maintainers have been working on removing these blobs from the mainline Linux tree, although Linux still distributes and requests proprietary firmware.
+
+Linux-libre, run by the FSFLA, is a project that basically removes all blobs and enables people to run a fully free kernel. Although, there is an impact on functionality since many divers simply won't work. The goal of Linux-libre is to make people aware of this problem. After using Linux-libre for some time (and reading many /*(DEBLOBBED)*/ messages on syslog), we decided to work on filling the gaps.
+
+Some binary firmware object code is distributed under the GPL (even if corresponding sources are not available). That means we can legally disassemble it, hopefully producing useful source code under free licensing terms.
+
+Most, if not all of the source code will be written in device-specific assembly and/or low-level C.
+
+We are aware that some firmware that are distributed as part of Linux or requested by it are released under non-free terms, despite allowing distribution. This project won't deal with this kind of firmware.
+
+List of drivers we are currently working on:
+dabusb - digital radio receptor that uses EzUSB, a 8051 cpu used by many other devices. The dabusb will be deprecated, but we hope the EzUSB hacking will still be useful.
+rt2x00 - set of drivers for Ralink 802.11 devices. All devices (at least usb) seem to use basically the same firmware.
+
+Authors/Maintainers
+Felipe Correa da Silva Sanches - juca@members.fsf.org
+Rodrigo Rodrigues da Silva - pitanga@members.fsf.org
